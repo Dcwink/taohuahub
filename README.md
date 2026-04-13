@@ -50,6 +50,7 @@ $newSession = $merchant->sessions()->create([
     'isnew' => true,
     'model_id' => 1,
 ]);
+$sessionList = $merchant->sessions()->getList(['page' => 1]);
 
 $session = $merchant->session('20260411S0A1B2C3D4E');
 $sessionInfo = $session->get();
@@ -75,6 +76,7 @@ $system = Factory::system(
     new SystemConfig('https://example.com', 'system-api-key')
 );
 
+$systemSessionList = $system->sessions()->getList(['page' => 1, 's_mchno' => 'MCH202604110001']);
 $queue = $system->ops()->queueStatus();
 $workers = $system->ops()->workers();
 $providerHealth = $system->ops()->providerHealth(['limit' => 20]);
@@ -122,5 +124,5 @@ $providerHealth = $system->ops()->providerHealth(['limit' => 20]);
 ## 开发与发布
 
 - 代码仓库会由 Packagist 自动同步新 tag
-- 推荐通过 Git tag 发布稳定版本，例如 `v0.1.1`
+- 推荐通过 Git tag 发布稳定版本，例如 `v0.1.3`
 - `main` 分支会在 Packagist 中显示为开发版本 `dev-main`

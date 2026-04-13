@@ -15,7 +15,7 @@ use TaohuaHub\Ai2\Result\Common\ApiResult;
  * 更新时间：2026-04-11
  *
  * @method ApiResult create(array $payload) 创建或复用会话
- * @method ApiResult getList(array $query = []) 获取会话列表（当前仅保留设计入口）
+ * @method ApiResult getList(array $query = []) 获取会话列表
  */
 final class Sessions
 {
@@ -45,17 +45,11 @@ final class Sessions
     /**
      * 获取会话列表。
      *
-     * 当前服务端尚未提供该接口，因此这里返回统一失败结果，而不是直接抛异常。
-     *
      * @param array $query 查询参数
      * @return ApiResult 会话列表结果
      */
     public function getList(array $query = []): ApiResult
     {
-        return ApiResult::failure(
-            '接口暂未实现',
-            'NOT_IMPLEMENTED',
-            '当前服务端未提供 merchant session list 接口，该方法仅保留为 SDK 规划入口。'
-        );
+        return $this->dispatcher->get('/admin/merchant/v1/sessions', $query);
     }
 }

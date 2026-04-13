@@ -68,8 +68,9 @@ $providerHealth = $system->ops()->providerHealth(['limit' => 20]);
 - 使用 `resolveUrl()` 将相对 `sse_url` 转成完整 URL
 - `system->messages()->send(['response_mode' => 'stream', ...])` 当前会等待流结束，并将 SSE 事件解析到返回结果 `data()['events']`
 
-See:
+接口文档：
 
-- `docs/01_架构设计.md`
-- `docs/02_目录结构.md`
-- `docs/03_API规划.md`
+- `docs/README.md`
+- `docs/common/01_客户端入口与配置.md`
+- `docs/merchant/README.md`
+- `docs/system/README.md`

@@ -2,6 +2,19 @@
 
 `docs/` 目录只存放 PHP SDK 的公开接口文档，不再放架构设计、开发规划或联动清单。
 
+## 安装
+
+Packagist 包：
+
+- `taohuahub/ai2-sdk-php`
+- https://packagist.org/packages/taohuahub/ai2-sdk-php
+
+安装命令：
+
+```bash
+composer require taohuahub/ai2-sdk-php
+```
+
 ## 目录
 
 ### Common

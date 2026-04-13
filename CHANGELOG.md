@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+## 0.1.2
+
+- refactor: replace free functions with `TaohuaHub\Ai2\Factory` static entrypoints
+
 ## 0.1.1
 
 - feat: add `system->ops()` resources for queue, workers, provider health, failed jobs and trace endpoints

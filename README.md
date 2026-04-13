@@ -31,9 +31,10 @@ composer require taohuahub/ai2-sdk-php:^0.1
 ```php
 <?php
 
+use TaohuaHub\Ai2\Factory;
 use TaohuaHub\Ai2\Config\MerchantConfig;
 
-$merchant = \TaohuaHub\Ai2\merchant(
+$merchant = Factory::merchant(
     new MerchantConfig(
         'https://example.com',
         'MCH202604110001',
@@ -67,9 +68,10 @@ $absoluteSseUrl = $merchant->resolveUrl($signed['sse_url'] ?? '');
 ```php
 <?php
 
+use TaohuaHub\Ai2\Factory;
 use TaohuaHub\Ai2\Config\SystemConfig;
 
-$system = \TaohuaHub\Ai2\system(
+$system = Factory::system(
     new SystemConfig('https://example.com', 'system-api-key')
 );
 

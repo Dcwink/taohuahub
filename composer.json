@@ -14,10 +14,7 @@
   "autoload": {
     "psr-4": {
       "TaohuaHub\\Ai2\\": "src/"
-    },
-    "files": [
-      "src/functions.php"
-    ]
+    }
   },
   "autoload-dev": {
     "psr-4": {

@@ -20,7 +20,9 @@
 ```php
 <?php
 
-$merchant = \TaohuaHub\Ai2\merchant($config);
+use TaohuaHub\Ai2\Factory;
+
+$merchant = Factory::merchant($config);
 
 $session = $merchant->session('20260411S0A1B2C3D4E');
 $session->get();

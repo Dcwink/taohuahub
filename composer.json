@@ -1,0 +1,27 @@
+{
+  "name": "taohuahub/ai2-sdk-php",
+  "description": "PHP 8 SDK for TaohuaHub AI2 admin/system and admin/merchant APIs.",
+  "type": "library",
+  "license": "proprietary",
+  "require": {
+    "php": "^8.0",
+    "ext-json": "*",
+    "guzzlehttp/guzzle": "^7.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "TaohuaHub\\Ai2\\": "src/"
+    },
+    "files": [
+      "src/functions.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "TaohuaHub\\Ai2\\Tests\\": "tests/"
+    }
+  }
+}
